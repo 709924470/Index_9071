@@ -1,0 +1,39 @@
+{% extends 'dwtitle.html' %}
+{% load static %}
+{% block title %}糟糕了...{% endblock %}
+
+{% block impb %}
+<style type="text/css">
+	body{
+		background-color: #000000;
+	}
+	.404{
+    	text-align: center;
+    	font-family:"幼圆";
+    	margin: auto 0;
+    	vertical-align:middle;
+	}
+	#backtoindexbecauseimstupid{
+		text-decoration: none;
+		color:#cfe2f3;
+	}
+	#backtoindexbecauseimstupid:hover{
+		text-decoration: none;
+		color:#dd7e6b;
+	}
+	.404 img{
+		background: none;
+		color: #cfe2f3;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+<center>
+	<div class="404">
+		<img alt="404 Error" src="{% static 'img/404.png' %}">
+		</p>
+		<a id="backtoindexbecauseimstupid" href="./">点我返回主页</a>
+	</div>
+</center>
+{% endblock %}

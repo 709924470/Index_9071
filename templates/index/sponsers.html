@@ -1,0 +1,64 @@
+{% extends 'dwtitle.html' %}
+{% load static %}
+<!doctype html>
+
+
+{% block title %}赞助商 | FRC 9071 Team{% endblock %}
+
+
+{% block impb %}
+<!-- Import before body -->
+<link href="{% static 'css/site_sponser.css' %}" rel="stylesheet" type="text/css">
+<script src="{% static 'js/stopExecutionOnTimeout.js' %}" type="text/javascript"></script>
+<script src="{% static 'js/anime.min.js' %}"></script>
+{% endblock %}
+
+
+{% block content %}
+<!-- Content -->
+<center id="sponsers">
+<a href="http://www.zz47.com/"><img src="{% static 'img/zz47.png' %}" class="slide glow"/></a>
+</center>
+{% endblock %}
+
+
+{% block impa %}
+<!-- Import after body -->
+<script>
+{% if spon %}
+	var spon = {{spon}}
+	var glow = {{glow}}
+	var link = {{link}}
+	var format = '<a href="{link}"><img src="{spon}" class="slide{glow}"/></a>'
+	var sp = document.getElementById('sponsers')
+	
+	function addsponser(){
+		var ispo = null
+		var ilin = null
+		var iglo = null
+		var istr = format
+		for(var a1 in spon){
+			ispo = spon[a1]
+			ilin = link[a1]
+			if (glow[a1]){
+				iglo = " " + glow[a1]
+			}else{
+				iglo = ""
+			}
+			istr = istr.replace('{link}',ilin)
+			istr = istr.replace('{spon}',ispo)
+			istr = istr.replace('{glow}',iglo)
+			sp.innerHTML += '\n' + istr + '\n'
+		}
+	}
+{% endif %}
+
+	anime({
+		targets: '.slide',
+		translateY: (window.height/2)/16 + 'rem',
+		opacity:1,
+		duration:1500,
+		loop: false,
+	});
+</script>
+{% endblock %}

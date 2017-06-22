@@ -1,0 +1,1 @@
+start http://127.0.0.1:7099 & python manage.py runserver 127.0.0.1:7099

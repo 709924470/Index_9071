@@ -1,0 +1,162 @@
+{% load static %}
+{% extends 'musetitle.html' %}
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<!-- Model From https://codyhouse.co/gem/horizontal-timeline/ -->
+	<!-- Author: Walter Ji in FRC 9071 team -->
+	<!--  -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% block impb %}
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:700,900|Fira+Sans:400,400italic' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href='{% static "css/reset.css" %}'> <!-- CSS reset -->
+	<link rel="stylesheet" href='{% static "css/style.css" %}'> <!-- Resource style -->
+	<script src='{% static "js/modernizr.js" %}'></script> <!-- Modernizr -->
+	<script src='{% static "js/jquery-2.1.4.js" %}'></script>
+	<script src='{% static "js/jquery.mobile.custom.min.js" %}'></script><!-- JQuery Resources -->
+	<!--style type="text/css">
+	.-inline{ display:inline} 
+	</style-->
+  	{% if cont %}
+	<script lang='text/javascript'>
+	var cont = {{cont|safe}}
+	var day = {{day|safe}}
+	var month = {{month|safe}}
+	var date = {{today|safe}}
+	var format = '<li><a href="#0" data-date="{dat}">{day} {mon}</a></li>'
+	function cl(s){
+		console.log(s)
+	}
+	function addevent(){
+		var iday = null
+		var imon = null
+		var idat = null
+		for(co in cont){
+			//cl(co)
+			for(d in day){
+				if (d == co){
+					iday = day[d]
+					//cl(iday)
+				}
+			}
+			for(m in month){
+				if (m == co){
+					imon = month[m]
+					//cl(imon)
+				}
+			}
+			for(dt in date){
+				if (dt == co){
+					idat = date[dt]
+					cl(idat)
+					cl(date)
+					cl(dt)
+					cl(co)
+				}
+			}
+			if (iday && imon && idat){
+				var ifor = format.replace('{dat}',idat)
+				ifor = ifor.replace('{day}',iday)
+				ifor = ifor.replace('{mon}',imon)
+				cl(ifor)
+				document.getElementById("eve").innerHTML += '	' + ifor + '\n'
+			}
+		}
+	}
+	</script>
+	{% else %}
+	<script lang='text/javascript'>
+	var error = '<li><a href="#0" data-date="Error">Error</a></li>'
+	function addevent(){
+		document.getElementById("eve").innerHTML += '	' + error + '\n'
+	}
+	</script>
+	{% endif %}
+	{% endblock %}
+	{% block title %}开发日志 | CRC 9071团队{% endblock %}
+</head>
+<body>
+<p/>
+<p/>
+{% block content %}
+<section class="cd-horizontal-timeline">
+	<div class="timeline">
+		<div class="events-wrapper">
+			<div class="events">
+				<ol id="eve">
+					<li><a href="#0" data-date="2017/6/12" class="selected">15 Jun</a></li>
+					<!-- Load area -->
+				</ol>
+				<script lang='text/javascript'>addevent()</script>
+				<span class="filling-line" aria-hidden="true"></span>
+			</div> <!-- .events -->
+		</div> <!-- .events-wrapper -->
+			
+		<ul class="cd-timeline-navigation">
+			<li><a href="#0" class="prev inactive">Prev</a></li>
+			<li><a href="#0" class="next">Next</a></li>
+		</ul> <!-- .cd-timeline-navigation -->
+	</div> <!-- .timeline -->
+
+	<div class="events-content">
+		<ol>
+			<li class="selected" data-date="2017/6/12">
+				<h2>这里是我们的开发日志</h2>
+				<em>2017.06.15</em>
+				<p>	
+					从今天开始我们将连续在这里更新我们的开发进度，欢迎围观!
+				</p>
+			</li>
+
+			{% if cont %}
+				{% for x in cont %}
+					{% for key_dat,val_dat in today.items %}
+						{% ifequal key_dat x %}
+			<li data-date="{{val_dat}}">
+						{% endifequal %}
+					{%endfor%}
+						{% for ax,bx in title.items %}
+							{% ifequal ax x %}
+				<h2>{{bx}}</h2>
+							{% endifequal %}
+						{%endfor%}
+						{% for ax,bx in cdate.items %}
+							{% ifequal ax x %}
+				<em>{{bx}}</em>
+							{% endifequal %}
+						{%endfor%}
+				</p>
+						{% for ax,bx in content.items %}
+							{% ifequal ax x %}
+				<p class="-inline">	
+					{{bx}}
+				</p>
+							{% endifequal %}
+						{%endfor%}
+						{% for ax,bx in img.items %}
+							{% ifequal ax x %}
+				<img class="-inline" src='{{bx}}'>
+							{% endifequal %}
+						{%endfor%}
+			</li>
+				{% endfor %}
+			{% else %}
+			<li data-date="Error">
+				<h2>Something went wrong!</h2>
+				<em>{{date}}</em>
+				<p>	
+					我们的服务器出了点问题，请稍后重试！(或者是你的网络出了问题)
+				</p>
+			</li>
+			{% endif %}
+		</ol>
+	</div> <!-- .events-content -->
+</section>
+{% endblock %}
+{% block impa %}
+<script src='{% static "js/main.js" %}'></script> <!-- Main Functions -->
+{% endblock %}
+</body>
+</html>
