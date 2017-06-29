@@ -1,5 +1,6 @@
 @charset "utf-8";
-body{
+
+body {
 	margin: 0;
 	padding: 0;
 }
@@ -12,7 +13,7 @@ body{
 	padding: 0px;
 	opacity: 0;
 }
-.zz47{
+.zz47 {
 	display: inline;
 	border-right: 2px solid #727272;
 	border-spacing: 3px;
@@ -23,16 +24,16 @@ body{
 	max-height: 100%;
 	max-width: 100%;
 }
-.teamid{
+.teamid {
 	display: inline;
 	font-size: 3em;
 	float: none;
 	margin-left: 3px;
 	line-height: 55px;
 }
-.pgs{
+.pgs {
 	display: inline;
-	font-family:"幼圆";
+	font-family: "幼圆";
 	font-size: 20px;
 	float: right;
 	line-height: 55px;
@@ -43,17 +44,17 @@ body{
 	border-left: 2px solid #727272;
 	font-weight: bold;
 	text-decoration: none;
-	color:#000B64;
+	color: #000B64;
 	padding: 0 30px;
 	margin: 0 0;
 }
-.pgs a:hover{
-	color:#c9daf8;
+.pgs a:hover {
+	color: #c9daf8;
 }
 div#clr {
 	clear: both;
 }
-.bline{
+.bline {
 	background-color: #727272;
 	height: 2px;
 	margin-top: 0;
@@ -66,11 +67,11 @@ div#clr {
 	display: inline;
 	text-decoration: none;
 	margin-bottom: 5%;
-	color:#666666;
+	color: #666666;
 }
 .bottom a:hover {
 	display: inline;
 	text-decoration: none;
 	margin-bottom: 5%;
-	color:#dd7e6b;
+	color: #dd7e6b;
 }

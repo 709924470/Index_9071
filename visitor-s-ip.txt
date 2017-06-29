@@ -803,3 +803,33 @@ User with IP: 127.0.0.1
 Visited /src/img/404.png 
 By browser Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
 -------------------------------------------------
+[2017-06-29 10:59:48] 
+User with IP: 127.0.0.1 
+Visited / 
+By browser Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+-------------------------------------------------
+[2017-06-29 11:03:46] 
+User with IP: 127.0.0.1 
+Visited / 
+By browser Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+-------------------------------------------------
+[2017-06-29 11:04:57] 
+User with IP: 127.0.0.1 
+Visited / 
+By browser Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+-------------------------------------------------
+[2017-06-29 11:13:36] 
+User with IP: 127.0.0.1 
+Visited / 
+By browser Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+-------------------------------------------------
+[2017-06-29 11:22:47] 
+User with IP: 127.0.0.1 
+Visited / 
+By browser Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+-------------------------------------------------
+[2017-06-29 11:23:09] 
+User with IP: 127.0.0.1 
+Visited / 
+By browser Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36
+-------------------------------------------------
