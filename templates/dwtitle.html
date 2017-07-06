@@ -1,9 +1,10 @@
 <!doctype html>
 {% load static %}
+<meta author="Walter from CRC 2017 team 9071"/>
 <html>
 <head>
 <meta charset="utf-8">
-<title>{% block title%}{% endblock %}</title>
+<title>{% block title%}{% endblock %} | FRC 9071 Team</title>
 <script src="{% static 'js/anime.min.js' %}"></script>
 <style type="text/css">
 @import url("{% static './css/site_title.css' %}");
@@ -30,6 +31,7 @@
 
 <body>
 <div class="banner">
+	<div id="top"></div>
 	<a href="http://www.zz47.com/"><img class="zz47" src="{% static './img/zz47.png' %}"/></a>
 	<div class="teamid">
 		9071
@@ -48,13 +50,17 @@
 		duration: 5000,
 		loop: false,
 	})
+	function cl(s){
+		//console.log(s)
+	}
 </script>
 {% block content %}{% endblock %}
 {% block impa %}{% endblock %}
 <footer>
-	<center class="bottom">
+	<center class="bottom" style="margin-top: 60px;">
 		<div class="bline"></div>
-		<a id="jsfunc" href="javascript:toTop()">回到顶部</a>
+		<a id="jsfunc" href="#top">回到顶部</a>
+		<div class="dj">Powered by Django</div>
 	</center>
 </footer>
 </body>

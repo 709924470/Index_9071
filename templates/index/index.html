@@ -24,41 +24,30 @@ Space
 	var month = {{month|safe}}
 	var date = {{today|safe}}
 	var format = '<li><a href="#0" data-date="{dat}">{day} {mon}</a></li>'
-	function cl(s){
-		console.log(s)
-	}
 	function addevent(){
 		var iday = null
 		var imon = null
 		var idat = null
 		for(co in cont){
-			//cl(co)
 			for(d in day){
 				if (d == co){
 					iday = day[d]
-					//cl(iday)
 				}
 			}
 			for(m in month){
 				if (m == co){
 					imon = month[m]
-					//cl(imon)
 				}
 			}
 			for(dt in date){
 				if (dt == co){
 					idat = date[dt]
-					cl(idat)
-					cl(date)
-					cl(dt)
-					cl(co)
 				}
 			}
 			if (iday && imon && idat){
 				var ifor = format.replace('{dat}',idat)
 				ifor = ifor.replace('{day}',iday)
 				ifor = ifor.replace('{mon}',imon)
-				cl(ifor)
 				document.getElementById("eve").innerHTML += '	' + ifor + '\n'
 			}
 		}
@@ -86,7 +75,7 @@ Space
 		<div class="events-wrapper">
 			<div class="events">
 				<ol id="eve">
-					<li><a href="#0" data-date="2017/6/12" class="selected">15 Jun</a></li>
+					<li><a href="#0" data-date="2017/6/25" class="selected">25 Jun</a></li>
 					<!-- Load area -->
 				</ol>
 				<script lang='text/javascript'>addevent()</script>
@@ -102,9 +91,9 @@ Space
 
 	<div class="events-content">
 		<ol>
-			<li class="selected" data-date="2017/6/12">
+			<li class="selected" data-date="2017/6/25">
 				<h2>这里是我们的开发日志</h2>
-				<em>2017.06.15</em>
+				<em>2017.06.25</em>
 				<p>	
 					从今天开始我们将连续在这里更新我们的开发进度，欢迎围观!
 				</p>

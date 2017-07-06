@@ -90,7 +90,7 @@ def index(resp):
 
 def aboutfrc(resp):
 	recordIP(resp)
-	return hr(rts('frc.html'))
+	return hr(rts('intro.html'))
 
 def aboutus(resp):
 	recordIP(resp)

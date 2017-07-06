@@ -28,6 +28,8 @@ h500 = rps.page404
 urlpatterns = [
     url(r'^/whoisadmin/', admin.site.urls),
     url(r'^favicon.ico$',RedirectView.as_view(url=r'src/favicon.ico')),
-    url(r'404',rps.page404),
+    url(r'^aboutus$',rps.aboutus),
+    url(r'^intro$',rps.aboutfrc),
+    url(r'^404$',rps.page404),
     url(r'^$', rps.index, name='home'),
 ]+static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)

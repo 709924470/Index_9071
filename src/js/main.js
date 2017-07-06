@@ -1,7 +1,6 @@
 jQuery(document).ready(function($){
-	//cl("I'm READY!!!")
 	var timelines = $('.cd-horizontal-timeline'),
-		eventsMinDistance = 60;
+		eventsMinDistance = 40;
 
 	(timelines.length > 0) && initTimeline(timelines);
 
@@ -132,9 +131,6 @@ jQuery(document).ready(function($){
 		for (i = 0; i < timelineComponents['timelineDates'].length; i++) { 
 		    var distance = daydiff(timelineComponents['timelineDates'][0], timelineComponents['timelineDates'][i]),
 		    	distanceNorm = Math.round(distance/timelineComponents['eventsMinLapse']) + 2;
-		    	cl(distance);
-		    	cl(distanceNorm);
-		    	cl(distanceNorm*min);
 		    timelineComponents['timelineEvents'].eq(i).css('left', distanceNorm*min+'px');
 		}
 	}
@@ -221,7 +217,7 @@ jQuery(document).ready(function($){
 				var dayComp = dateComp[0].split('/'),
 					timeComp = ["0", "0"];
 			}
-			var	newDate = new Date(dayComp[2], dayComp[1]-1, dayComp[0], timeComp[0], timeComp[1]);
+			var	newDate = new Date(dayComp[0], dayComp[1]-1, dayComp[2], timeComp[0], timeComp[1]);
 			dateArrays.push(newDate);
 		});
 	    return dateArrays;

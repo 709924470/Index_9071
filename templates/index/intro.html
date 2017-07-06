@@ -1,0 +1,84 @@
+{% extends 'dwtitle.html' %}
+{% load static %}
+{% block title %}关于比赛{% endblock %}
+{% block impb %}
+<style type="text/css">
+	body{
+		background-color: rgb(203, 219, 226);
+	}
+	.inline{
+		display: inline;
+	}
+	.title{
+		opacity: 1;
+		font-family:"微软雅黑";
+		float: none;
+		font-size: 1.5em;
+		vertical-align: middle;
+		min-width: 100%;
+	}
+	.light{
+		font-weight: lighter;
+	}
+	.bold{
+		font-weight: bold;
+	}
+	.frcintro{
+		font-family:"微软雅黑";
+		margin: 0 20%;
+		text-indent: 2.6em;
+		opacity: 1;
+	}
+	.frcintro p{
+		text-align: left;
+	}
+</style>
+{% endblock %}
+
+{% block content %}
+	<center>
+		<div class="title">
+			<img alt="frclogo" class="fl" src="{% static './img/frclogo.png' %}">
+			<h2 class="action-wrapper">FRC赛事</h2>
+			<div class="bline"></div>
+		</div>
+		<p>
+		<div class="frcintro">
+			<p>
+				<font class="bold">FIRST Robotics Competition</font> , FRC比赛，即国际9-12年级中学生机器人对战赛，是一个由<font class="bold">FIRST (For Inspiration and Recognition of Science and Technology)</font> 集团发起的、在世界范围内有影响力的国际机器人比赛。由发明家 Dean Kamen创立的FIRST机构 目的是激发青少年对科学与技术的兴趣。
+			</p>
+			<p>
+				FRC是一个针对15-18岁孩子的国际比赛项目，每年1月份， FIRST Robotics Competion向全球参赛队伍公布年度挑战项目，这个项目鼓励孩子们用科学的方式去调查研究以及自己动手设计机器人。学生们在辅导员的指导下为机器人进行设计、加工、搭建、编程以完成比赛。
+			</p>
+			<p>
+				<font class="bold">CRC(China Robotics Competition)</font>比赛是FRC比赛的中国季后赛。
+			</p>
+			<em class="bold">摘自百度百科</em>
+		</div>
+	</center>
+{% endblock %}
+
+{% block impa %}
+<script src="{% static './js/jquery-2.1.4.js' %}"></script>
+<script type="text/javascript">
+	var timeline = anime.timeline()
+	timeline
+		.add({
+			targets: '.frcintro',
+			easing: 'easeInExpo',
+			translateY: -300,
+			opacity: 0,
+			offset: 1500,
+			loop: false,
+		})
+		.add({
+			targets: '.title',
+			translateY: -300,
+			easing: 'easeInExpo',
+			opacity: 0,
+			loop: false,
+			offset: 2000
+		})
+	timeline.reverse()
+</script>
+{% endblock %}
