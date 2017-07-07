@@ -2,11 +2,113 @@
 {% load static %}
 {% block title %}关于我们{% endblock %}
 {% block impb %}
-
+<style type="text/css">
+body{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: "微软雅黑";
+}
+.content{
+	height: 170vh;
+}
+.logo{
+	max-height: 300px;
+	max-width: 300px;
+}
+.inline{
+	display: inline;
+}
+.info{
+	text-align: center;
+}
+.teaminfo{
+	margin-left: 30%;
+	text-align: left;
+}
+.ind{
+	text-indent: 5em;
+}
+</style>
 {% endblock %}
 {% block content %}
-
+<center class="content">
+	<div class="img inline">
+		<img alt="LOGO" class="logo" src="{% static './img/logo.png' %}">
+	</div>
+	<div class="info inline">
+	<h1>9071臻远队</h1>
+	<li>成立时间: 9071来自郑州第四十七中学，成立于2017年6月12日</li>
+	<li>学校简介
+	<p>郑州市第四十七中学是一所美丽、自由、民主、多元、融合、共生，并具有国际化办学特色的学校。我校秉承“切问近思，</p>
+	<p>自能发展”的教学理念和“仰望星空，脚踏实地”的校训，培养出了大批综合性的优秀人才。</p>
+	<p>其中，我校宏志班更是以“宏图报党恩，志远为国强”的拼搏精神，激发出了无穷斗志。 </p>
+	<p>我校社团种类丰富，共有英美文化社、机器人创新社，摄影社，校园电视台等二十余种社团，</p>
+	<p>丰富了我校学生的校园生活，增强了学生的综合素质，使学生更加热爱生活，热爱学习。</p>
+	<p>学生们凭借自己的辛勤汗水为我校赢得了多项荣誉，为学校增了光、添了彩。</p>
+	<p>目前，我校正致力于‘四园’建设，即‘美丽整洁的花园、和谐温馨的家园、</p>
+	<p>平等对话的学园和师生共长的乐园’。相信在我校师生的共同努力下，我们四十七中的明天会更好！</p></li>
+	</div>
+	<div class="teaminfo">
+	<li>
+		队伍简介</li>
+		<p><li>队名：臻远队</li>
+		<p><li>内涵：臻于极致，志存高远。</li>
+<p><li>队伍编号：9071</li></p>
+<p><li>队歌：《我的天空》</li></p>
+<p><li>成员简介</li></p>
+<p><li>队长        张宣哲</li></p>
+<p><li>副队长      郑路宽</li></p>
+<p><li>编程组组长  纪世新</li></p>
+<p><li>编程组成员  张滨朔   程梦燕</li></p>
+<div class="ind">
+<p>            李鹤     张无忧</p>
+<p>            唐浩哲   王鹏翔</p>
+</div>
+<p><li>机械组组长  李小岩</li></p>
+<p><li>机械组成员  周浩楠   郭师奇</li></p>
+<div class="ind">
+<p>            魏铮     杨皓翔</p>
+<p>            程昊宇   寇雨暄</p>
+<p>            费相林</p>
+</div>
+<p><li>宣传组组长  乔彦醒</li></p>
+<p><li>宣传组组员  栾智超   郭利娜</li></p>
+<p><li>安全组组长  郭利娜</li></p>
+<p><li>安全组组员  刘睿欣  李佳惠</li></p>
+<p><li>设计组组长  李奕童</li></p>
+<p><li>设计组组员  于  航  郭竞帆</li></p>
+<p>我们的队伍没有这种比赛经验。赞助现在还没有。以后努力。</p>
+	</div>
+</center>
 {% endblock %}
 {% block impa %}
-
+<script type="text/javascript">
+	var tline = anime.timeline();
+	tline.add({
+		targets:".img",
+		easing: 'easeInExpo',
+		translateX: -500,
+		opacity: 0,
+		offset: 1500,
+		loop: false,
+	})
+	tline.add({
+		targets:".info",
+		easing: 'easeInExpo',
+		translateX: 500,
+		opacity: 0,
+		offset: 1500,
+		loop: false,
+	})
+	tline.add({
+		targets:".teaminfo",
+		easing: 'easeInExpo',
+		translateX: 500,
+		opacity: 0,
+		offset: 1500,
+		loop: false,
+	})
+	tline.reverse();
+</script>
 {% endblock %}
